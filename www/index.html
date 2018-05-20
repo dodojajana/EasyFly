@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    <script type="text/javascript" src="cordova.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Link na CSS stil -->
+    <link href="css/glavniStil.css" type="text/css" rel="stylesheet" />
+    <!-- Link na JavaScript datoteku -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/FileSaver.js"></script>
+    <link rel="stylesheet" href="css/themes/easyfly.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <!-- <link rel="stylesheet"href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Projekt</title>
+  </head>
+
+    <body>
+       <div id="aplikacija">
+         <div class="header" id="myHeader"><h1>EASY FLY</h1></div><br>
+         <div id="ostalo"><div class="inp">
+           <div class="dropdown">
+             <input type="text" class="unos" id="mjesto_polazak"  />
+             <div id="select" class="dropdown-content">
+               <ul id="placeList">
+               </ul>
+             </div>
+          </div>
+          <div class="dropdown2">
+            <input type="text" class="unos" id="mjesto_dolazak"/>
+            <div id="select2" class="dropdown-content">
+            <ul id="placeList2">
+            </ul>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <div id="botuni">
+          <button id="btn_polazak">Departure airport</button>
+          <button id="btn_dolazak">Arrival airport</button>
+          <button id="btn_lokacija">Nearest relevant airport</button>
+        </div><br>
+        <div id="date">
+          <label for="datum_polaska">Departure:</label>
+            <input type="date" id="datep" min="2018-02-25" max="2019-02-01" oninput="dohvatiDatum1()" />
+          <label for="datum_dolaska" id='lbldated'>Return:</label>
+            <input type="date" id="dated" min="2018-02-25" max="2019-02-01" oninput="dohvatiDatum2()" />
+        </div><br>
+        <label>Passengers</label>
+        <div id="putnici">
+          <button class="btn btn-default btn-sm" id="plus">
+            <span class="glyphicon glyphicon-plus-sign"></span>
+          </button>
+        <input type="number" id="br_put" min=1 value=1>
+        <button class="btn btn-default btn-sm" id='minus'>
+          <span class="glyphicon glyphicon-minus-sign" ></span>
+        </button>
+      </div>
+        <label>Max price</label><input type=range min=1 max=2000 step=1 value=1000 data-highlight = true id="max_cijena">
+        <label>Currency</label>
+        <select id="valuta">
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+          <option value="GBP">GBP</option>
+          <!-- <option value="HRK">HRK</option> -->
+      </select>
+        <label for="povratni_let">Return flight</label><input type="checkbox" id="povratni_let" checked onchange="hide()"><br>
+        <button id="btn_search">Search</button>
+      </div>
+      <div id='rez' >
+      <table class="r" id="rezultat">
+      </table></div>
+      <button id="home" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-home"></span>Home</button>
+      <button id="clear" onclick="ocisti()">Clear</button>
+      <button id='history'>History<i class="material-icons">history</i></button>
+    </div>
+    </body>
+</html>
