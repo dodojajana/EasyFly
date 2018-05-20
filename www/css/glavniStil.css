@@ -1,0 +1,81 @@
+
+li{border: 1px solid #ddd;
+  /* font-size: 70%; */
+  }
+  ul{
+    list-style-type: none;text-align:justify;
+
+  }
+  .r{
+    margin-left:10px;
+    width: 300px;
+    border: 2px solid #e6f7ff;
+    /* border-color:  #e6f7ff; */
+  }
+  tr{
+    border: 1px solid #e6f7ff;
+    /* border-color:   */
+    color: white;
+  }
+  td{
+    margin: 5px;
+  }
+  h1{
+  text-align: center;
+  color: white;
+}
+#home, #clear, #history{
+  display: none;
+}
+ostalo{
+  display: block;
+}
+.r li{
+  border-color: white;
+  color:white;
+
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown2 {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content li:hover {background-color: #ddd}
+.show {display:block;}
+.hide{display: none;}
+@media screen and (max-width: 767px) and (min-width: 0px) {
+    #aplikacija {
+      max-width: 640px;
+        display: block;
+        position: absolute;
+        margin-left: 5px;
+        margin-right: 5px;
+        top: 0px;
+        left: 0px;
+        width: 98%
+        height: 750px;
+        z-index: 10;
+        /* background-image: url("img/pozadina.png"); */
+        /* background-color: #6699ff; */
+        background-size: cover;
+        background-position: center top;
+        font-style: italic;
+    }}
+#btn_search{
+  align-self: center;
+}
+#br_put{
+  text-align: center;
+  width: 30px;
+}
