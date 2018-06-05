@@ -1,6 +1,5 @@
 var zahtjev, zahtjev2,zahtjev3, zahtjev4,zahtjev5, mj_from, mj_to, date1, date2, price,val;
-//var apiKey ="bIsETKJNASRGpdB1SabBLmzYbvu0ABmc";
-var apiKey="2gMHNTtqtXpusgKdxB9P9oRIIIo14Ptc";
+var apiKey="";
 var url="";
 var iata_d=""; var iata_p=""; var txt=""; var br_putnika=1;
 window.onload=function(){
